@@ -24,11 +24,7 @@ pipeline {
             steps {
                 sh 'echo $env.BRANCH_NAME'
             }
-<<<<<<< HEAD
-    
-=======
         
->>>>>>> master
             post {
                 success {
                     slackSend (channel: 'jenkins-multibranch', color: '#00FF00', message: "BUILD STAGE SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' [${env.BRANCH_NAME}]")
